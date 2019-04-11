@@ -21,5 +21,15 @@ namespace _02_Classes
             Age = age;
             YearsOfService = yearsOfService;
         }
+
+        public int CalculateSignupAge()
+        {
+            //int signupAge = Age - YearsOfService;
+            //return signupAge;
+
+            return Age - YearsOfService;
+        }
+
+
     }
 }

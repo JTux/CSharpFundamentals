@@ -16,5 +16,19 @@ namespace _02_Classes_Tests
             Assert.AreEqual(24, employee.Age);
             Assert.AreEqual(1, employee.YearsOfService);
         }
+
+        [TestMethod]
+        public void EmployeeSignupAgeTest()
+        {
+            // Arrange
+            Employee employee = new Employee(1, "Tucker", 24, 1);
+
+            // Act
+            int actual = employee.CalculateSignupAge();
+            int expected = 23;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

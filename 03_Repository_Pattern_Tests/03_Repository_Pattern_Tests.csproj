@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5907A98F-04A6-4FC5-9BF4-B734A013A26A}</ProjectGuid>
+    <ProjectGuid>{3965A697-E8B5-44FF-B6FB-75DDA6093F44}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02_Classes_Tests</RootNamespace>
-    <AssemblyName>02_Classes_Tests</AssemblyName>
+    <RootNamespace>_03_Repository_Pattern_Tests</RootNamespace>
+    <AssemblyName>03_Repository_Pattern_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,17 +49,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassTests.cs" />
-    <Compile Include="EmployeeTests.cs" />
+    <Compile Include="StreamingContentTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\02_Classes\02_Classes.csproj">
-      <Project>{cc3cd216-9b9b-4c94-9277-1db0a83386e0}</Project>
-      <Name>02_Classes</Name>
+    <ProjectReference Include="..\03_Repository_Pattern\03_Repository_Pattern.csproj">
+      <Project>{9DFC4862-57A3-4182-82A6-80620C8EA1E6}</Project>
+      <Name>03_Repository_Pattern</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
