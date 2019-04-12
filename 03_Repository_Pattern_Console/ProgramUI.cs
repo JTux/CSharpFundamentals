@@ -13,6 +13,7 @@ namespace _03_Repository_Pattern_Console
 
         public void Run()
         {
+            SeedList();
             RunMenu();
         }
 
@@ -99,6 +100,17 @@ namespace _03_Repository_Pattern_Console
 
             StreamingContent newContent = new StreamingContent(title, starRating, genre, isMature, rating, runTime);
             _streamingRepo.AddToList(newContent);
+        }
+
+        private void SeedList()
+        {
+            StreamingContent toyStory = new StreamingContent("Toy Story", 5, GenreType.Bromance, false, "G", 118.2d);
+            StreamingContent banana = new StreamingContent("Banana", 10, GenreType.Thriller, true, "PG-13", 600d);
+            StreamingContent rubber = new StreamingContent("Rubber", 3, GenreType.Drama, true, "R", 125d);
+
+            _streamingRepo.AddToList(toyStory);
+            _streamingRepo.AddToList(banana);
+            _streamingRepo.AddToList(rubber);
         }
     }
 }
