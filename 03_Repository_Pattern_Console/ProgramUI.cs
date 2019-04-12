@@ -22,6 +22,7 @@ namespace _03_Repository_Pattern_Console
             bool running = true;
             while (running)
             {
+                Console.Clear();
                 Console.WriteLine("What would you like to do?\n" +
                     "1. Add new content\n" +
                     "2. See all content\n" +
@@ -38,9 +39,11 @@ namespace _03_Repository_Pattern_Console
                         break;
                     case "2":
                         // See All Content
+                        ShowAllContent();
                         break;
                     case "3":
                         // Get Content by Title
+                        GetContentByTitle();
                         break;
                     case "4":
                         // Exit
@@ -100,6 +103,47 @@ namespace _03_Repository_Pattern_Console
 
             StreamingContent newContent = new StreamingContent(title, starRating, genre, isMature, rating, runTime);
             _streamingRepo.AddToList(newContent);
+        }
+
+        private void ShowAllContent()
+        {
+            List<StreamingContent> list = _streamingRepo.GetStreamingContentList();
+            //foreach //type //name //in //collection
+            foreach (StreamingContent content in list)
+            {
+                // Title Rating Stars 
+                Console.WriteLine($"{content.Title} {content.Genre} {content.Rating} {content.StarRating} {content.IsMature}");
+            }
+
+            Console.ReadLine();
+        }
+
+        private void GetContentByTitle()
+        {
+            // Ask for a title to search for
+            Console.WriteLine("Enter the title of the content you are looking for: ");
+
+            // Get their input
+            string title = Console.ReadLine();
+
+            // Find the correct content
+            StreamingContent content = _streamingRepo.GetContentByName(title);
+
+            // Display said content
+            if (content != null)
+            {
+                Console.WriteLine($"Title: {content.Title}\n" +
+                    $"Genre: {content.Genre}\n" +
+                    $"Rating: {content.Rating}\n" +
+                    $"Star Rating: {content.StarRating}\n" +
+                    $"Mature: {content.IsMature}");
+            }
+            else
+            {
+                Console.WriteLine("Title invalid. Could not find any results.");
+            }
+
+            Console.ReadLine();
         }
 
         private void SeedList()

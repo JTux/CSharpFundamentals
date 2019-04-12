@@ -22,17 +22,15 @@ namespace _03_Repository_Pattern
 
         public StreamingContent GetContentByName(string title)
         {
-            StreamingContent content = new StreamingContent();
-
             foreach(StreamingContent sc in _listOfContent)
             {
-                if(sc.Title == title)
+                if(sc.Title.ToLower() == title.ToLower())
                 {
                     return sc;
                 }
             }
 
-            return content;
+            return null;
         }
     }
 }
