@@ -15,8 +15,8 @@ namespace _04_Calculator_Tests
             CalculatorRepository repo = new CalculatorRepository();
 
             // Act
-            double expected = repo.Add(7, 5);
-            double actual = 12;
+            double actual = repo.Add(7, 5);
+            double expected = 12;
 
             // Assert
             Assert.AreEqual(expected, actual);

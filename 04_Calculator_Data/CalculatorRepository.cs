@@ -49,6 +49,16 @@ namespace _04_Calculator_Data
             return diff;
         }
 
+        public double Subtract(List<double> numbers, double startingNumber)
+        {
+            double total = startingNumber;
+            foreach(double number in numbers)
+            {
+                total = total - number;
+            }
+            return total;
+        }
+
         /// <summary>
         /// Calculates and returns the product of the two double parameters.
         /// </summary>
