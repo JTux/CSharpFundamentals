@@ -7,7 +7,7 @@
     <ProjectGuid>{EC729C30-435D-4293-B6D7-B967CDEABB09}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_05_DeveloperTeams_Console</RootNamespace>
-    <AssemblyName>_05_DeveloperTeams_Console</AssemblyName>
+    <AssemblyName>05_DeveloperTeams_Console</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\05_DeveloperTeams_Repository\05_DeveloperTeams_Repository.csproj">
+      <Project>{7d3ee3ca-2bb3-4daa-a2d1-fce6181d70a6}</Project>
+      <Name>05_DeveloperTeams_Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F5063F8-9DD5-4D37-BE6D-248AC26D0516}</ProjectGuid>
+    <ProjectGuid>{0533BE8D-5812-4128-9BEE-941648597CA0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_05_DeveloperTeams_Tests</RootNamespace>
-    <AssemblyName>05_DeveloperTeams_Tests</AssemblyName>
+    <RootNamespace>_06_Polymorphism_Tests</RootNamespace>
+    <AssemblyName>06_Polymorphism_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,12 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\05_DeveloperTeams_Repository\05_DeveloperTeams_Repository.csproj">
-      <Project>{7d3ee3ca-2bb3-4daa-a2d1-fce6181d70a6}</Project>
-      <Name>05_DeveloperTeams_Repository</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
